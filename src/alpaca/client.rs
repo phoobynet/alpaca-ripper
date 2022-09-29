@@ -1,4 +1,4 @@
-use crate::options::get_credentials::get_credentials;
+use crate::options::credentials::get_credentials;
 use reqwest::{header, Client};
 
 //

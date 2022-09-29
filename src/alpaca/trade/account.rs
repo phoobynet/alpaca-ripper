@@ -1,20 +1,4 @@
-use crate::alpaca::trade::client::get_client;
 use serde::Deserialize;
-
-pub async fn get_account() -> Result<Account, &'static str> {
-    let client = get_client().unwrap();
-
-    let account = client
-        .get("https://paper-api.alpaca.markets/v2/account")
-        .send()
-        .await
-        .unwrap()
-        .json::<Account>()
-        .await
-        .unwrap();
-
-    Ok(account)
-}
 
 #[derive(Deserialize, Debug)]
 #[allow(dead_code)]
