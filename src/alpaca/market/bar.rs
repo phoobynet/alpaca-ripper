@@ -1,4 +1,4 @@
-#[allow(dead_code)]
+#![allow(unused_variables, dead_code)]
 // https://alpaca.markets/docs/api-references/market-data-api/stock-pricing-data/historical/#bars
 use chrono::{DateTime, Utc};
 use serde::Deserialize;
